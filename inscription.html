@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Conférence Web 3.0</title>
+   <!-- render normally all elements  -->
+   <link rel="stylesheet" href="css/normalize.css">
+   <!-- font awesome library  -->
+   <link rel="stylesheet" href="css/all.min.css">
+   <!-- google fonts  -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;700;800&family=Work+Sans:wght@200;300;500;600;700;800&display=swap"
+      rel="stylesheet">
+   <!-- Main Css File   -->
+   <link rel="stylesheet" href="css/inscription.css">
+</head>
+
+<body>
+   <header>
+      <div class="header-container">
+         <div class="logo">
+            <img src="/assets/logo3.png" alt="Logo de la conférence Web 3.0">
+         </div>
+         <nav>
+            <ul>
+               <li><a href="index.html">Accueil</a></li>
+               <li><a href="index.html#programme">Programme</a></li>
+               <li><a href="index.html#orateurs">Orateurs</a></li>
+               <li><a href="index.html#inscription">Inscription</a></li>
+               <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+   <main>
+      <div class="special-heading">
+         <h1>Inscription à la Conférence</h1>
+      </div>
+      <form>
+         <label for="nom">Nom complet:</label>
+         <input type="text" id="nom" name="nom" required>
+         <label for="email">Adresse e-mail:</label>
+         <input type="email" id="email" name="email" required>
+         <label for="telephone">Numéro de téléphone:</label>
+         <input type="tel" id="telephone" name="telephone" required>
+         <label for="institution">Institution:</label>
+         <input type="text" id="institution" name="institution">
+         <label for="pays">Pays:</label>
+         <select id="pays" name="pays" required>
+            <option value="">Sélectionnez votre pays</option>
+            <option value="france">France</option>
+            <option value="belgique">Belgique</option>
+            <option value="suisse">Suisse</option>
+         </select>
+         <label for="inscription">Type d'inscription:</label>
+         <select id="inscription" name="inscription" required>
+            <option value="">Sélectionnez votre type d'inscription</option>
+            <option value="etudiant">Étudiant</option>
+            <option value="professionnel">Professionnel</option>
+            <option value="membre">Membre</option>
+         </select>
+         <button type="submit">Inscrivez-vous maintenant</button>
+      </form>
+   </main>
+   <footer>
+      <div class="footer-container">
+         <p>Copyright © 2023
+            <a href="#">Conférence Web 3.0</a> | Tous droits réservés
+         </p>
+      </div>
+   </footer>
+</body>
+
+</html>
