@@ -117,13 +117,24 @@ ul {
 /* Header styles */
 
 header {
+   position: fixed;
+   width: 100%;
+   left: 0;
+   z-index: 9999;
    background-color: #333;
    color: #fff;
    padding: 0 20px;
 }
 
-header nav li:hover a {
-   color: #2196f3;
+header .toggle-menu {
+   color: white;
+   font-size: 22px;
+}
+@media (min-width: 767px) {
+   header .toggle-menu {
+      display: none;
+   }
+
 }
 
 header .logo {
@@ -139,17 +150,50 @@ header .logo img {
    justify-content: space-between;
    align-items: center;
 }
-
-nav ul {
+header ul {
    display: flex;
+   flex-wrap: wrap;
 }
-
-nav li {
-   margin-left: 20px;
+@media (max-width: 767px) {
+   header ul {
+      display: none;
+   }
+   header ul li {
+      margin: 10px 0;
+   }
+   header i:hover + ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: absolute;
+      top: 100%;
+      left: 15px;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: calc(100% - 30px);
+   }
+   header li:first-of-type::after,
+   header ul i {
+      display: none;
+   }
 }
-
-nav a {
-   color: #fff;
+header ul li {
+   padding: 0 10px;
+   position: relative;
+   z-index: 3;
+}
+header i {
+   padding-left: 10px;
+   color: white;
+   font-size: 20px;
+}
+header a {
+   text-decoration: none;
+   color: white;
+   font-size: 14px;
+   transition: .3s;
+}
+header li:hover a {
+   color: #2196f3;
 }
 
 /* Main styles */
@@ -158,6 +202,7 @@ main {
    max-width: 960px;
    margin: 0 auto;
    padding: 20px;
+   padding-top: 100px;
 }
 
 .about {
